@@ -11,7 +11,6 @@ export async function checkUser(req, res, next) {
             return res.sendStatus(404);
         }
         req.user = user[0];
-        console.log(req.user);
         next();
     } catch (error) {
         next(error);
