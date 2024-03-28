@@ -56,7 +56,6 @@ export async function updateUser(req, res, next) {
 }
 
 export async function deleteUserWithId(req, res, next) {
-    console.log(req.user.id);
     try {
         const { rows: deletedUser } = await pool.query(
             'DELETE FROM users WHERE id = $1 RETURNING *',
